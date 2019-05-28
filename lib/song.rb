@@ -24,7 +24,7 @@ def self.new_by_name(name)
       end 
     end
   end 
-def self  
+def self   
   def self.all
   @@all
   end

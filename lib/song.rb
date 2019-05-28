@@ -17,7 +17,8 @@ def self.new_by_name(name)
     song
     
   end
-  def 
+  def self.find_by_name(name)
+  end 
   def self.all
   @@all
   end

@@ -7,8 +7,7 @@ class Song
   end
 
   def save
-    song = Song.create
-Song.all.include?(song)
+ 
     self.class.all << self
   end
 

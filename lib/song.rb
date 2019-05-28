@@ -23,6 +23,8 @@ def self.new_by_name(name)
         return
         name 
   end 
+end
+end 
   def self.all
   @@all
   end

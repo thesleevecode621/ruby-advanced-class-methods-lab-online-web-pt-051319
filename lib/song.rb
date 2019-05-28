@@ -17,14 +17,14 @@ def self.new_by_name(name)
     song
     
   end
-  def self.find_by_name(name)
+ def self.find_by_name(name)
     @@all.each do |song|
-      if song.name  == name 
-        return
-        name 
+      if song.name == name
+        return song
+      end 
+    end
   end 
-end
-end 
+
   def self.all
   @@all
   end

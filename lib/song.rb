@@ -18,8 +18,8 @@ def self.new_by_name(name)
     
   end
   def self.find_by_name(name)
-    @@all.each do |s_n|
-      if s_n == name 
+    @@all.each do |name|
+      if name  == name 
         return
         name 
   end 

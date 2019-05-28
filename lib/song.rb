@@ -40,13 +40,7 @@ class Song
     self.all.sort_by { |song| song.name }
   end
 
-  def self.new_from_filename(filename)
-    song = self.new 
-    title = filename.gsub(/\w+[^-]\z/, "")
-    song.artist_name = title.scan(/\w+[^-]/)[0].strip
-    song.name = title.scan(/\w+[^-]+\w+[^.]/)[1]
-    song 
-  end
+ 
 
   
   
@@ -61,26 +55,20 @@ class Song
      song 
    end
 
-  def self.create_from_filename(filename)
-    song = self.create 
-    title = filename.gsub(/\w+[^-]\z/, "")
-    song.artist_name = title.scan(/\w+[^-]/)[0].strip
-    song.name = title.scan(/\w+[^-]+\w+[^.]/)[1]
-    song 
-  end
-
-  # Alternative self.create_from_filename solution
   
-  # def self.create_from_filename(filename)
-  #   title = filename.split(" - ")
-  #   artist = title[0]
-  #   song_name, extension = title[1].split(".")
 
-  #   song = self.create 
-  #   song.artist_name = artist 
-  #   song.name = song_name 
-  #   song 
-  # end
+  Alternative self.create_from_filename solution
+  
+  def self.create_from_filename(filename)
+    title = filename.split(" - ")
+    artist = title[0]
+     song_name, extension = title[1].split(".")
+
+     song = self.create 
+     song.artist_name = artist 
+     song.name = song_name 
+     song 
+   end
 
   def self.destroy_all
     self.all.clear
